@@ -49,9 +49,9 @@ const AllorderModal = ({ setEmploys, setCount, size }) => {
 
                                                 </div>
                                                 <div>
-                                                    {errors.FirstName && errors.FirstName.type === "required" && <span
+                                                    {errors.Name && errors.Name.type === "required" && <span
                                                         className=' text-danger'>This is required</span>}
-                                                    {errors.FirstName && errors.FirstName.type === "maxLength" && <span>Max length
+                                                    {errors.Name && errors.Name.type === "maxLength" && <span>Max length
                                                         exceeded</span>}
                                                 </div>
 
