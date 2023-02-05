@@ -5,11 +5,11 @@ import { useForm } from 'react-hook-form';
 const AllorderModal = ({ setEmploys, setCount, size }) => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    // const employeeAdd = useFetch("http://localhost:5000/addEmploys", "POST", employees)
+    // const employeeAdd = useFetch("https://jobtask2023.onrender.com/addEmploys", "POST", employees)
 
 
     const onSubmit = data => {
-        fetch("http://localhost:5000/addEmploys", {
+        fetch("https://jobtask2023.onrender.com/addEmploys", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

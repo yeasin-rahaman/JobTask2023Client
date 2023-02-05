@@ -25,7 +25,7 @@ const AllOrders = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allEmploys?page=${page}&&size=${size}`)
+        fetch(`https://jobtask2023.onrender.com/allEmploys?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setEmploys(data.allEmploys)
@@ -46,7 +46,7 @@ const AllOrders = () => {
     const handleDeleteRequest = id => {
         const proceed = window.confirm('Are you sure you want to Delete Employ')
         if (proceed) {
-            const url = `http://localhost:5000/deleteEmploy/${id}`;
+            const url = `https://jobtask2023.onrender.com/deleteEmploy/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -72,11 +72,11 @@ const AllOrders = () => {
     }
 
 
-    // const employeeAdd = useFetch("http://localhost:5000/addEmploys", "POST", employees)
+    // const employeeAdd = useFetch("https://jobtask2023.onrender.com/addEmploys", "POST", employees)
 
 
     const onSubmit = data => {
-        fetch("http://localhost:5000/addEmploys", {
+        fetch("https://jobtask2023.onrender.com/addEmploys", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

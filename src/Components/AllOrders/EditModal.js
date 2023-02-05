@@ -8,7 +8,7 @@ const EditModal = ({ editEmploy, employs, setEmploys }) => {
     const onSubmit = data => {
         data._id = editEmploy._id
         data.complete = true
-        fetch(`http://localhost:5000/updateUser`, {
+        fetch(`https://jobtask2023.onrender.com/updateUser`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
